@@ -1,0 +1,9 @@
+@html.extend('layout', function (model) {
+
+    @html.block('content', function (model) {
+
+		<h1>404 error</h1>
+		
+		<p>Could not find page: @model.url</p>
+    })
+})

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="sp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <base href="/">
+    <title>Angular 2 Demo</title>
+    <!--<link rel="stylesheet" href="/css/styles.min.css" type="text/css" />-->
+
+    <script src="/public/js-vendor/systemjs/system.js"></script>
+    <script src="/public/js-vendor/angular2/angular2.js"></script>
+    <script src="/public/js-vendor/angular2/http.js"></script>
+    <script src="/public/js-vendor/angular2/router.js"></script>
+      
+    @html.block('head')
+</head>
+<body>
+
+    <app></app>
+    <script>
+        System.config({
+            baseURL: '/public',
+            defaultJSExtension: true,
+            paths: {
+                '*': '/public/js/*.js',
+                'angular2/*': '/public/js-vendor/angular2/*.js'
+            }
+        });
+        System.import('bootstrap');
+    </script>
+
+    <div class="layout-content">
+        @html.block('content')
+    </div>
+
+</body>
+</html>
