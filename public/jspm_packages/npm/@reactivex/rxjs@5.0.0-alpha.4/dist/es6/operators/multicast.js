@@ -1,6 +1,0 @@
-/* */ 
-"format cjs";
-import ConnectableObservable from '../observables/ConnectableObservable';
-export default function multicast(subjectFactory) {
-    return new ConnectableObservable(this, subjectFactory);
-}
