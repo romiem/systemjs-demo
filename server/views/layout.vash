@@ -11,10 +11,8 @@
     <title>Angular 2 Demo</title>
     <!--<link rel="stylesheet" href="/css/styles.min.css" type="text/css" />-->
 
-    <script src="/public/js-vendor/systemjs/system.js"></script>
-    <script src="/public/js-vendor/angular2/angular2.js"></script>
-    <script src="/public/js-vendor/angular2/http.js"></script>
-    <script src="/public/js-vendor/angular2/router.js"></script>
+    <script src="/public/jspm_packages/system.js"></script>
+    <script src="/public/config.js"></script>
       
     @html.block('head')
 </head>
@@ -22,15 +20,7 @@
 
     <app></app>
     <script>
-        System.config({
-            baseURL: '/public',
-            defaultJSExtension: true,
-            paths: {
-                '*': '/public/js/*.js',
-                'angular2/*': '/public/js-vendor/angular2/*.js'
-            }
-        });
-        System.import('bootstrap');
+        System.import('ts/bootstrap');
     </script>
 
     <div class="layout-content">

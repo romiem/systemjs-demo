@@ -7,7 +7,7 @@ var port = process.env.PORT || 3000;
 app.set('view engine', 'vash');
 app.set('views', path.join( __dirname, 'views'));
 
-app.use('/public', express.static(path.join(__dirname, '/../public/www')));
+app.use('/public', express.static(path.join(__dirname, '/../public')));
 console.log(path.join(__dirname, '/../public/www'));
 
 app.get('/', function (req, res) {
